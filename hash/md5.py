@@ -74,9 +74,7 @@ def rot_func(func: Callable[[int,int,int], int],
 
 
 def format_int32(num: int) -> str:
-    bighex = "{0:08x}".format(num)
-    binver = binascii.unhexlify(bighex)
-    return "{0:08x}".format(int.from_bytes(binver, byteorder='little'))
+    return (num).to_bytes(4, byteorder='little').hex().lower()
 
 
 def bit_count(b: bytes) -> int:
