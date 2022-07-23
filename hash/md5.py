@@ -7,7 +7,6 @@ https://github.com/dubniczky/Cryptography-Algorithms
 '''
 
 
-import binascii
 from typing import Callable
 
 
