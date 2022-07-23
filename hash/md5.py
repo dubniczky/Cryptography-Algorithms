@@ -68,7 +68,8 @@ def I(X: int, Y: int, Z: int) -> int:
     return Y ^ (X | (~Z))
 
 
-def rot_func(func: Callable[[int,int,int], int], a: int, b: int, c: int, d: int, M: int, s: int, t: int):
+def rot_func(func: Callable[[int,int,int], int],
+             a: int, b: int, c: int, d: int, M: int, s: int, t: int):
     return b + bit_rotate_left( (a + func(b,c,d) + M + t) , s)
 
 
@@ -84,7 +85,7 @@ def bit_count(b: bytes) -> int:
 
 def md5(data: str|bytes) -> str:
     # Convert format
-    if type(data) is str:
+    if isinstance(data, str):
         data = bytes(data, encoding='utf-8')
 
     # Apply padding

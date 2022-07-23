@@ -1,0 +1,21 @@
+[MASTER]
+
+# Ignore compiled and virtual files
+ignore=.pytest_cache,__pycache__,.venv
+
+# Ignore all tests
+ignore-patterns=test_*
+
+# Do not save data
+persistent=no
+
+# Show correction hints
+suggestion-mode=yes
+
+# Disable the following warnings
+disable=invalid-name, #some math variable names are a single character by specification
+        missing-function-docstring, #only the directly used functions are documented
+        too-many-arguments, #some math functions will have a lot of args
+        consider-using-f-string, #some int to hex is more explicit with format method
+        too-many-statements, #some long crypto functions do not make sense to break up
+    
