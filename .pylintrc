@@ -18,4 +18,5 @@ disable=invalid-name, #some math variable names are a single character by specif
         too-many-arguments, #some math functions will have a lot of args
         consider-using-f-string, #some int to hex is more explicit with format method
         too-many-statements, #some long crypto functions do not make sense to break up
+        line-too-long, #some tests are long
     
